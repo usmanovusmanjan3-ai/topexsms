@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOPEX — Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <section id="loginView">
+      <header class="top">
+        <div class="brand">
+          <div class="logo">T</div>
+          <div>
+            <h1>TOPEX</h1>
+            <p>STUDENT MANAGEMENT SYSTEM</p>
+          </div>
+        </div>
+        <span class="pill">GOLD NEON EDITION</span>
+      </header>
+
+      <div class="gold-line"></div>
+
+      <div class="panel login">
+        <h2>Tizimga kirish</h2>
+        <p class="muted">Davomat · Baholar · Faollik · To‘lovlar</p>
+
+        <label for="loginName">Login</label>
+        <input id="loginName" placeholder="Login kiriting">
+
+        <label for="loginPass">Parol</label>
+        <input id="loginPass" type="password" placeholder="Parol kiriting">
+
+        <label for="loginRole">Rol</label>
+        <select id="loginRole">
+          <option value="admin">Admin</option>
+          <option value="teacher">O‘qituvchi</option>
+          <option value="student">Talaba</option>
+        </select>
+
+        <div class="row login-actions">
+          <button class="primary" id="loginButton">Kirish ↗</button>
+          <button id="demoButton">Demo login</button>
+        </div>
+
+        <p class="note">
+          Admin: jadra / jadra<br>
+          O‘qituvchi: bahodir / bahodir<br>
+          Talaba: talaba001 / talaba001
+        </p>
+      </div>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <header class="top">
+        <div class="brand">
+          <div class="logo">T</div>
+          <div>
+            <h1>TOPEX</h1>
+            <p>STUDENT MANAGEMENT SYSTEM</p>
+          </div>
+        </div>
+        <div class="row">
+          <span id="who" class="pill"></span>
+          <button id="logoutButton">Chiqish</button>
+        </div>
+      </header>
+
+      <div class="gold-line"></div>
+
+      <div class="layout">
+        <aside class="side" id="nav"></aside>
+
+        <main class="main">
+          <div class="stats">
+            <div class="stat">
+              <span>O‘qituvchilar</span>
+              <strong>80</strong>
+            </div>
+            <div class="stat">
+              <span>Talabalar</span>
+              <strong>160</strong>
+            </div>
+            <div class="stat">
+              <span>Guruhlar</span>
+              <strong>8</strong>
+            </div>
+            <div class="stat">
+              <span>To‘lov kutilmoqda</span>
+              <strong id="unpaidCount">160</strong>
+            </div>
+          </div>
+
+          <div id="content"></div>
+        </main>
+      </div>
+
+      <footer>Yaratuvchi: Akramjanova Jadra Maratovna</footer>
+    </section>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
